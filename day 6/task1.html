@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 3</title>
+</head>
+<body>
+
+    <h2>Event Registration Form</h2>
+    <p>Please fill out the details below to register for our upcoming event.</p>
+
+    <form action="" method="post">
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required><br><br>
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
+        <label for="phone">Phone Number:</label>
+        <input type="text" id="phone" name="phone" placeholder="Enter your phone number" required><br><br>
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" placeholder="Enter your city" required><br><br>
+        <label for="event">Select Event:</label>
+        <select id="event" name="event" required>
+            <option value="">--Choose an event--</option>
+            <option value="workshop">Workshop</option>
+            <option value="seminar">Seminar</option>
+            <option value="conference">Conference</option>
+        </select><br><br>
+        <input type="submit" value="Register Now">
+    </form>
+
+</body>
+</html>
