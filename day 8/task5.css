@@ -1,0 +1,23 @@
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+input[type="tel"],
+input[type="file"] {
+  border: 1px solid #726c6c;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: rgb(132, 201, 201);
+}
+::placeholder{
+    color: darkblue;
+}
+
+input[type="submit"] {
+  background-color: rgb(132, 201, 201);
+  color: darkblue;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+

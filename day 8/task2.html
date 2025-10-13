@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+
+    <style>
+        body {
+            background-color: rgb(69, 50, 50);
+            font-family: Arial, sans-serif;
+        }
+
+        form {
+            background-color: rgb(157, 215, 227);
+            width: 350px;
+            margin: 30px auto;
+            padding: 20px;
+            border-radius: 30px;
+        }
+
+        label {
+            color: rgb(243, 86, 2);
+        }
+
+        ::placeholder {
+            color: red;
+        }
+
+        input[type=text],
+        input[type=number],
+        input[type=email],
+        input[type=date] {
+            width: 200px;
+            padding: 7px;
+            margin: 3px;
+        }
+
+        button {
+            background-color: orange;
+            padding: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="" method="post">
+        <fieldset>
+            <legend><b>Student Registration</b></legend>
+
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" placeholder="Enter First Name"><br>
+
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" placeholder="Enter Last Name"><br>
+
+            <label for="roll">Roll Number:</label>
+            <input type="number" id="roll" placeholder="Enter Roll No"><br>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob"><br>
+
+            <label>Gender:</label>
+            <input type="radio" name="Gender" value="Male">Male
+            <input type="radio" name="Gender" value="Female">Female
+            <br>
+
+            <label for="phone">Phone Number:</label>
+            <input type="number" id="phone" placeholder="Enter Number"><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Enter Email"><br>
+
+            <label>Course:</label>
+            <input type="checkbox" name="Course" value="B.E">B.E
+            <input type="checkbox" name="Course" value="B.Tech">B.Tech
+            <input type="checkbox" name="Course" value="B.Sc">B.Sc<br><br>
+
+            <button type="submit">Register</button>
+        </fieldset>
+    </form>
+</body>
+
+</html>
