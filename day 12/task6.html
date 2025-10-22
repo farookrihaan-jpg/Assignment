@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive 3-Column Flexbox Layout</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f4f8;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      text-align: center;
+      color: #0d47a1;
+      margin-top: 30px;
+    }
+
+    .flex-container {
+      display: flex;
+      justify-content: space-around;
+      align-items: stretch;
+      gap: 20px;
+      padding: 30px;
+      max-width: 300px;
+      margin: auto;
+    }
+
+    .column {
+      background-color: #90caf9;
+      color: #0d47a1;
+      flex-direction: row;
+      flex-wrap: wrap;
+      padding: 20px;
+      border-radius: 10px;
+      font-size: 18px;
+    }
+
+
+  </style>
+</head>
+
+<body>
+  <h1>Responsive 3-Column Layout Flexbox</h1>
+
+  <div class="flex-container">
+    <div class="column">
+      <h2>Nature</h2>
+      <p>
+        Discover the beauty of the natural world — from lush forests and sparkling rivers
+        to majestic mountains and vibrant wildlife.
+      </p>
+    </div>
+
+    <div class="column">
+      <h2>Technology</h2>
+      <p>
+        Technology connects us in ways never before possible, shaping the way we work, learn,
+        and experience the world around us.
+      </p>
+    </div>
+
+    <div class="column">
+      <h2>Creativity</h2>
+      <p>
+        Creativity is the heart of innovation — turning imagination into reality through art,
+        design, and new ideas that inspire change.
+      </p>
+    </div>
+  </div>
+</body>
+
+</html>

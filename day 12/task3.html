@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertical Flexbox Layout</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        
+        .container {
+            background-color: powderblue;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            height: 400px;
+            margin: 40px auto;
+            width: 250px;
+            border-radius: 10px;
+        }
+
+        .container div {
+            background-color: #90caf9;
+            color: #0d47a1;
+            text-align: center;
+            width: 150px;
+            padding: 25px;
+            margin: 5px auto;
+            font-size: 22px;
+            border-radius: 8px;
+        }
+
+        .container div:hover {            
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Vertical Flexbox Layout</h1>
+    <div class="container">
+        <div>Home</div>
+        <div>About</div>
+        <div>Contact</div>
+    </div>
+</body>
+</html>

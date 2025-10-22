@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float Image Beside Text</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: white;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        .container img {
+            float: left;
+            margin-right: 15px;
+            border-radius: 10px;
+            border: 2px solid #b26363;
+        }
+
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container clearfix">
+        <h1>Floating Image Beside Text</h1>
+        <img src="./images/Beautiful Forest.avif" alt="Beautiful Forest" width="250" height="200">
+        <p>
+            Floating an image beside text allows for more attractive and readable page layouts.
+            In this example, the image is floated to the left, so the text flows neatly around it.
+            This is a common technique used in articles, blogs, and news websites where images are placed
+            next to paragraphs to support the written content visually.
+        </p>
+        <p>
+            However, when using float, sometimes the parent container might collapse because floated elements
+            are taken out of the normal document flow. To fix this, we can apply a <strong>clearfix</strong>
+            — a CSS method that ensures the parent element expands to contain its floated children.
+            This keeps the layout structured and avoids overlapping content.
+        </p>
+    </div>
+</body>
+
+</html>

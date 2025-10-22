@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Full Page Grid Layout</title>
+  <style>
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f0f4f8;
+    }
+
+    h1, h2, h3 {
+      margin: 0;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-areas:
+        "header header"
+        "nav main"
+        "nav aside"
+        "footer footer";
+      grid-template-columns: 200px 1fr;
+      grid-template-rows: auto 1fr 1fr auto;
+      gap: 10px;
+      height: 100vh;
+      padding: 10px;
+    }
+
+    header {
+      grid-area: header;
+      background-color: #0d47a1;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      border-radius: 10px;
+    }
+
+    nav {
+      grid-area: nav;
+      background-color: #64b5f6;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    main {
+      grid-area: main;
+      background-color: #bbdefb;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    aside {
+      grid-area: aside;
+      background-color: #90caf9;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    footer {
+      grid-area: footer;
+      background-color: #0d47a1;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      border-radius: 10px;
+    }
+
+</style>
+</head>
+
+<body>
+  <div class="grid-container">
+    <header>
+      <h1>My Website</h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <h2>Main Content</h2>
+      <p>
+        This is the main area where your primary content will go. You can add articles, images,
+        or any other important information here. CSS Grid makes it easy to control layout and spacing.
+      </p>
+    </main>
+
+    <aside>
+      <h3>Sidebar</h3>
+      <p>
+        The sidebar can contain additional information like links, promotions, or ads.
+        It complements the main content and improves user navigation.
+      </p>
+    </aside>
+
+    <footer>
+      &copy; 2025 my website 
+    </footer>
+  </div>
+</body>
+
+</html>
