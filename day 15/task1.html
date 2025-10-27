@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Haven</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #f4f1ea;
+            color: #3e2f1c;
+        }
+        header {
+            background-color: #5a3e2b;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background-image: url('https://images.unsplash.com/photo-1512820790803-83ca734da794');
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+        .hero h2 {
+            font-size: 40px;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 5px #000;
+        }
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .hero button {
+            background-color: #ffcf96;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .hero button:hover {
+            background-color: #ffe3c6;
+        }
+        .section {
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .section h2 {
+            font-size: 32px;
+        }
+        .items {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            width: 220px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .card:hover {
+            transform: scale(1.05);
+            transition: 0.3s;
+        }
+        .gallery {
+            background-color: #fffaf3;
+            padding: 40px 20px;
+        }
+        .gallery h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        .gallery-images {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+        .gallery-images img {
+            width: 250px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s;
+        }
+        .gallery-images img:hover {
+            transform: scale(1.05);
+        }
+        footer {
+            background-color: #5a3e2b;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+        @media (max-width: 600px) {
+            nav a {
+                display: block;
+                margin: 8px 0;
+            }
+            .items {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Book Haven</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Books</a>
+            <a href="#">Gallery</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Welcome to Book Haven</h2>
+        <p>Your cozy corner for stories that inspire and delight.</p>
+        <button>Explore Books</button>
+    </section>
+
+    <section class="section" id="books">
+        <h2>Our Collection</h2>
+        <div class="items">
+            <div class="card">
+                <h3>Fiction</h3>
+                <p>Escape into worlds of imagination and wonder.</p>
+            </div>
+            <div class="card">
+                <h3>Non-Fiction</h3>
+                <p>Learn, grow, and explore real stories that inspire.</p>
+            </div>
+            <div class="card">
+                <h3>Children’s Books</h3>
+                <p>Magical tales for the little dreamers.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery">
+        <h2>Book Moments</h2>
+        <div class="gallery-images">
+            <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f" alt="Stack of books">
+            <img src="https://images.unsplash.com/photo-1516979187457-637abb4f9353" alt="Open book">
+            <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570" alt="Reading nook">
+            <img src="./images/pexels-element5-1370295.jpg" alt="Bookshelf">
+            <img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e" alt="Book and coffee">
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Book Haven | Read. Dream. Discover.</p>
+    </footer>
+</body>
+</html>
