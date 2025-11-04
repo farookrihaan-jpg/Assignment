@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dark Mode Toggle (No CSS)</title>
+</head>
+<body>
+  <p>Click the button to toggle between Light and Dark Mode.</p>
+  <button id="toggleBtn">Enable Dark Mode</button>
+
+  <script>
+    const button = document.getElementById("toggleBtn");
+    let darkMode = false;
+
+    button.addEventListener("click", function() {
+      if (!darkMode) {
+        document.body.style.backgroundColor = "black";
+        document.body.style.color = "white";
+        button.textContent = "Disable Dark Mode";
+        darkMode = true;
+      } else {
+        document.body.style.backgroundColor = "white";
+        document.body.style.color = "black";
+        button.textContent = "Enable Dark Mode";
+        darkMode = false;
+      }
+    });
+  </script>
+</body>
+</html>

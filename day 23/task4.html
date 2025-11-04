@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Remove First List Item</title>
+</head>
+<body>
+  <h2>My List</h2>
+  <ul id="myList">
+    <li>Apple</li>
+    <li>Banana</li>
+    <li>Cherry</li>
+  </ul>
+
+  <button onclick="remfir()">Remove First Item</button>
+
+  <script>
+    function remfir() {
+      const list = document.getElementById("myList");
+      const firstItem = list.firstElementChild;
+      if (firstItem) {
+        list.removeChild(firstItem);
+      }
+    }
+  </script>
+</body>
+</html>

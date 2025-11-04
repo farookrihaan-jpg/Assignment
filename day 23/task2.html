@@ -1,0 +1,28 @@
+<!-- Use querySelector() to change the color of a paragraph. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="mypara">This is a sample paragraph.</p>
+    <button onclick="change()">Change Color</button>
+    <script>
+         function change() {
+            let text = document.querySelector("#mypara");
+            text.style.color="blue";
+        }
+    </script>
+
+</body>
+
+</html>
