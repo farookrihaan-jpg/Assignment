@@ -1,4 +1,4 @@
-let day=6;
+let day=13;
 switch (day) {
     case 1:
         console.log("Monday");
@@ -18,7 +18,11 @@ switch (day) {
     case 6:
         console.log("Saturday");
         break;
-    default:
+    
+    case 7:
         console.log("Sunday");
         break;
+    default:
+        console.log("default value");
+        break;      
 }
