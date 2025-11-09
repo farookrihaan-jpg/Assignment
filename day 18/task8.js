@@ -1,4 +1,4 @@
-let password="Rihaan@2003";
+let password="Rihaan@20003";
 if(password.length>=12)
 {
     console.log("Password is “secure”");
