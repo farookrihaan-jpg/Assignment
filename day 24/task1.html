@@ -1,1 +1,19 @@
 <!-- Create a button that changes text when clicked. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Button Text Change</title>
+</head>
+<body>
+  <h2 id="text">Hello, welcome!</h2>
+  <button onclick="changeText()">Click Me</button>
+
+  <script>
+    function changeText() {
+      document.getElementById("text").innerText = "You clicked the button!";
+    }
+  </script>
+</body>
+</html>

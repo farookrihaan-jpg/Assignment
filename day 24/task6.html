@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Validation with Try...Catch</title>
+</head>
+<body>
+  <h2>User Registration</h2>
+
+  <form id="userForm">
+    <label>Name:</label><br>
+    <input type="text" id="name" placeholder="Enter your name"><br><br>
+
+    <label>Email:</label><br>
+    <input type="email" id="email" placeholder="Enter your email"><br><br>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <p id="message"></p>
+
+  <script>
+    const form = document.getElementById("userForm");
+    const message = document.getElementById("message");
+
+    form.addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      try {
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        if (name === "") {
+          throw new Error("Name cannot be empty!");
+        }
+        if (email === "") {
+          throw new Error("Email cannot be empty!");
+        }
+        if (!email.includes("@") || !email.includes(".")) {
+          throw new Error("Please enter a valid email address!");
+        }
+
+        message.style.color = "green";
+        message.textContent = "Form submitted successfully!";
+      } 
+      catch (error) {
+        message.style.color = "red";
+        message.textContent = "Error: " + error.message;
+        console.error(error.message);
+      }
+    });
+  </script>
+</body>
+</html>

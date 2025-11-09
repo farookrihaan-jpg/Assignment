@@ -1,0 +1,23 @@
+<!-- Use input event to display user input live.x -->
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Input Display</title>
+</head>
+<body>
+  <h2>Type something below:</h2>
+  <input type="text" id="userInput" placeholder="Start typing...">
+  <p id="display"></p>
+
+  <script>
+    const inputField = document.getElementById("userInput");
+    const displayText = document.getElementById("display");
+
+    inputField.addEventListener("input", function() {
+      display.textContent = inputField.value;
+    });
+  </script>
+</body>
+</html>

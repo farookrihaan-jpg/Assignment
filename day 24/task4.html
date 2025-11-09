@@ -1,0 +1,24 @@
+<!-- Wrap a piece of code inside try...catch and log the error. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Try...Catch Example</title>
+</head>
+<body>
+  <h2>Check the console for error handling</h2>
+  <button onclick="runCode()">Run Code</button>
+
+  <script>
+    function runCode() {
+      try {
+        let result = undefinedVariable + 5;
+        console.log("Result:", result);
+      } catch (error) {
+        console.error("An error occurred:", error.message);
+      }
+    }
+  </script>
+</body>
+</html>
