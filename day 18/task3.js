@@ -1,4 +1,4 @@
-const n=15;
+const n=25;
 if(n/2==0){
     console.log("The given number is even");
 }else{
