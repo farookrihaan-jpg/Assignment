@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Validation Example</title>
+</head>
+<body>
+  <h2>Form Validation</h2>
+
+  <form id="userForm">
+    <label>Name:</label>
+    <input type="text" id="name"><br><br>
+
+    <label>Email:</label>
+    <input type="email" id="email"><br><br>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <p id="message"></p>
+
+  <script>
+    document.getElementById("userForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const message = document.getElementById("message");
+
+      try {
+        if (!name) {
+          throw new Error("Name field is required!");
+        }
+        if (!email) {
+          throw new Error("Email field is required!");
+        }
+
+        message.textContent = "Form submitted successfully!";
+        message.style.color = "green";
+
+      } catch (error) {
+        message.textContent = "Error: " + error.message;
+        message.style.color = "red";
+
+      } finally {
+        console.log("Code executed.");
+      }
+    });
+  </script>
+</body>
+</html>

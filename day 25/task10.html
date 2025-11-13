@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Combined Form Validation</title>
+</head>
+<body>
+  <h2>User Form Validation</h2>
+
+  <form id="userForm">
+    <label>Name:</label>
+    <input type="text" id="name"><br><br>
+
+    <label>Age:</label>
+    <input type="number" id="age"><br><br>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <p id="message"></p>
+
+  <script>
+    document.getElementById("userForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      const name = document.getElementById("name").value.trim();
+      const age = Number(document.getElementById("age").value.trim());
+      const message = document.getElementById("message");
+
+      try {
+        if (!name) {
+          throw new Error("Name cannot be empty!");
+        }
+        if (isNaN(age) || age <= 0) {
+          throw new Error("Please enter a valid age!");
+        }
+        if (age < 18) {
+          throw new Error("Access denied! You must be at least 18 years old.");
+        }
+
+        message.textContent = `Welcome, ${name}! Age verified successfully.`;
+        message.style.color = "green";
+
+      } catch (error) {
+        console.log("Error Name:", error.name);
+        console.log("Error Message:", error.message);
+        message.textContent = `Error: ${error.message}`;
+        message.style.color = "red";
+
+      } finally {
+        console.log("Code executed.");
+      }
+    });
+  </script>
+</body>
+</html>
